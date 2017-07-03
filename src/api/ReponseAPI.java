@@ -1,14 +1,14 @@
 package api;
 
-import org.json.JSONObject;
+import org.json.JSONArray;
 
 class ReponseAPI {
 	
 	private boolean erreur;
 	private String messageErreur;
-	private JSONObject donnees;
+	private JSONArray donnees;
 	
-	public ReponseAPI(JSONObject donnees, boolean err, String message) {
+	public ReponseAPI(JSONArray donnees, boolean err, String message) {
 		this.erreur = err;
 		this.donnees = donnees;
 		this.messageErreur = message;
@@ -22,7 +22,7 @@ class ReponseAPI {
 		return this.messageErreur;
 	}
 	
-	public JSONObject getDonnees(){
+	public JSONArray getDonnees(){
 		return this.donnees;
 	}
 	
